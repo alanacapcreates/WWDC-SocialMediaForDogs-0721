@@ -17,7 +17,9 @@ const dogs = [
         age: "9 months old"
     }
 ]
-
+function handleclick(){
+    console.log("clicked")
+}
 function renderProfiles(){
 
     for (let i = 0; i < dogs.length; i++) {
@@ -35,6 +37,8 @@ function renderProfiles(){
         profileAge.textContent = dogs[i].age
         moreInfo.textContent = "See More"
 
+        moreInfo.addEventListener("click",handleclick)
+
         profile.append(profileImg)
         profile.append(profileName)
         profile.append(profileAge)
@@ -45,6 +49,5 @@ function renderProfiles(){
     
 
 }
-
 
 renderProfiles()
