@@ -23,7 +23,9 @@ h1 > span {
 .container {
     text-align: center;
     padding: 2em;   
-    height: 100%
+    width: 100%;
+    background: cornsilk;
+    margin-bottom: 50px;
 }
 
 
@@ -55,7 +57,7 @@ img{
     color: black;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #bababa;
-    width: 250px;
+    width: 350px;
     margin: 15px;
     padding: 1em;
 }
@@ -75,4 +77,21 @@ img{
     background: black;
     color: white;
     transition: ease-in-out 0.2s;
+}
+
+.post-style{
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #bababa;
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    
+}
+.post-card-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
