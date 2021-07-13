@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background: #fdff00;  
+    background:gainsboro;  
     font-family: sans-serif;     
 }
 
@@ -24,7 +24,7 @@ h1 > span {
     text-align: center;
     padding: 2em;   
     width: 100%;
-    background: cornsilk;
+    background:ghostwhite;
     margin-bottom: 50px;
 }
 
