@@ -95,3 +95,40 @@ img{
     height: 300px;
     object-fit: cover;
 }
+
+.profile-modal{
+    position: relative;
+    width: 75%;
+    padding: 45px;
+    margin:0 auto;
+    background:white;
+    box-shadow: 2px 2px 5px #bababa;
+    font-size: 24px;
+    color: black;
+}
+.profile-modal h2{
+    color:#fb0081;
+}
+.close-button{
+    margin-top: 5px;
+    margin-right: 5px;
+    position:absolute;
+    top:0;
+    right:0;
+    padding: 10px 20px;
+    background-color: black;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+}
+.close-button:focus,
+.close-button:hover
+{
+    background-color:#fb0081;
+    color: white;
+}
+.toy{
+    text-decoration: 1px underline wavy #fb0081;
+   font-weight: bold;
+}
