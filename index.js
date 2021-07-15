@@ -58,7 +58,7 @@ function handleclick(event){
     //clear container
     dogProfile.innerHTML = ""
     //create modal box
-    const intro = document.createElement("h2")
+    const intro = document.createElement("h1")
     intro.innerHTML = `the <span>B</span>ark<span>B</span>ox`
     const profileDetails = document.createElement("div")
     const picContainer = document.createElement("div")
@@ -144,6 +144,7 @@ function renderProfiles(){
         const moreInfo = document.createElement("button")
 
         profile.setAttribute("class","card-style")
+        profileAge.setAttribute("class", "subtitle")
         moreInfo.setAttribute("id", i)
         moreInfo.setAttribute("class","btn-more")
 
