@@ -58,10 +58,12 @@ function handleclick(event){
     //clear container
     dogProfile.innerHTML = ""
     //create modal box
+    const intro = document.createElement("h2")
+    intro.innerHTML = `the <span>B</span>ark<span>B</span>ox`
     const profileDetails = document.createElement("div")
     const picContainer = document.createElement("div")
 
-    const profileName = document.createElement("h2")
+    const profileName = document.createElement("h3")
     const profileAge = document.createElement("p")
     const favToy = document.createElement("p")
     const proPic1 = document.createElement("img")
@@ -94,6 +96,7 @@ function handleclick(event){
 
             profileName.textContent = dogs[i].name
             profileAge.textContent = dogs[i].age
+            profileAge.setAttribute("class", "subtitle")
             favToy.innerHTML = `My favorite toy is my <span class="toy">${dogs[i].favoriteToy}</span>`
         }
         
@@ -108,11 +111,12 @@ function handleclick(event){
 
     // profileDetails.append(proPic1)
     // profileDetails.append(proPic2)
+    profileDetails.append(intro)
     profileDetails.append(picContainer)
     profileDetails.append(profileName)
     profileDetails.append(profileAge)
     profileDetails.append(favToy)
-    console.log(profileName)
+    // console.log(profileName)
     // else if(event.target.id==="dogBtn-2"){
     // profileDetails.textContent = "this is gracie"
     // }
