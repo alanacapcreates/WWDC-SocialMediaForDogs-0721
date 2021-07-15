@@ -6,19 +6,31 @@ const dogs = [
         name: 'Stella',
         thumbnail: 'img/thb_stella.png',
         age: "4 years old",
-        favoriteToy: "cookie"
+        favoriteToy: "cookie",
+        proPic1: "img/stella_daydream.jpg",
+        pic1Caption: "thinking about dinner",
+        proPic2: "img/stella3bd.png",
+        pic2Caption: "celebrating my 3rd birthday with a photoshoot!"
     },
      {
         name: 'Gracie',
         thumbnail: 'img/thb_gracie.png',
         age: "1 year old",
-        favoriteToy: "squirrel"
+        favoriteToy: "squirrel",
+        proPic1: "img/gracie_duck.jpg",
+        pic1Caption: "dont take my toy please!",
+        pic2Caption: "can I have a treat please?",
+        proPic2: "img/gracie-kitchen.jpg"
     },
      {
         name: 'Charlotte',
         thumbnail: 'img/thb_charlotte.png',
         age: "9 months old",
-        favoriteToy: "donut"
+        favoriteToy: "donut",
+        proPic1: "img/StellaGracieCharlotte.jpg",
+        pic1Caption: "hangin with my BFFs",
+        pic2Caption: "time to go to starbucks",
+        proPic2: "img/charlotte-car.jpg"
     }
 ]
 
@@ -47,26 +59,59 @@ function handleclick(event){
     dogProfile.innerHTML = ""
     //create modal box
     const profileDetails = document.createElement("div")
+    const picContainer = document.createElement("div")
 
     const profileName = document.createElement("h2")
     const profileAge = document.createElement("p")
     const favToy = document.createElement("p")
+    const proPic1 = document.createElement("img")
+    const proPic2 = document.createElement("img")
+
+    const proPic1Cap = document.createElement("p")
+    const proPic2Cap = document.createElement("p")
+
+    picContainer.setAttribute("class", "picContainer")
+
+    const propic1C = document.createElement("div")
+    const propic2C = document.createElement("div")
+
     profileDetails.setAttribute("class","profile-modal")
+    proPic1.setAttribute("class","profile-img")
+    proPic2.setAttribute("class","profile-img")
     
-
-
+    
     //setting the text content depending on the dog
     for(let i=0;i<dogs.length;i++){
         if(event.target.id==i){
-           profileName.textContent = dogs[i].name
-           profileAge.textContent = dogs[i].age
-           favToy.innerHTML = `My favorite toy is my <span class="toy">${dogs[i].favoriteToy}</span>`
-           profileDetails.append(profileName)
-           profileDetails.append(profileAge)
-           profileDetails.append(favToy)
+            proPic1.setAttribute("src", dogs[i].proPic1)
+            proPic2.setAttribute("src", dogs[i].proPic2)
+            
+            proPic1.setAttribute("title", dogs[i].pic1Caption)
+            proPic2.setAttribute("title", dogs[i].pic2Caption)
+            
+            proPic1Cap.textContent = dogs[i].pic1Caption
+            proPic2Cap.textContent = dogs[i].pic2Caption
+
+            profileName.textContent = dogs[i].name
+            profileAge.textContent = dogs[i].age
+            favToy.innerHTML = `My favorite toy is my <span class="toy">${dogs[i].favoriteToy}</span>`
         }
         
     }
+    propic1C.append(proPic1)
+    propic1C.append(proPic1Cap)
+    picContainer.append(propic1C)
+
+    propic2C.append(proPic2)
+    propic2C.append(proPic2Cap)
+    picContainer.append(propic2C)
+
+    // profileDetails.append(proPic1)
+    // profileDetails.append(proPic2)
+    profileDetails.append(picContainer)
+    profileDetails.append(profileName)
+    profileDetails.append(profileAge)
+    profileDetails.append(favToy)
     console.log(profileName)
     // else if(event.target.id==="dogBtn-2"){
     // profileDetails.textContent = "this is gracie"
