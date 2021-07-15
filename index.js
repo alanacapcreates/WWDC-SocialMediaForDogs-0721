@@ -109,27 +109,22 @@ function handleclick(event){
     propic2C.append(proPic2Cap)
     picContainer.append(propic2C)
 
-    // profileDetails.append(proPic1)
-    // profileDetails.append(proPic2)
+ 
     profileDetails.append(intro)
     profileDetails.append(picContainer)
     profileDetails.append(profileName)
     profileDetails.append(profileAge)
     profileDetails.append(favToy)
-    // console.log(profileName)
-    // else if(event.target.id==="dogBtn-2"){
-    // profileDetails.textContent = "this is gracie"
-    // }
-    // else{
-    //     profileDetails.textContent = "this is charlotte"
-    // }
+    
 
 
 
     const close = document.createElement("button")
     close.textContent = "X"
     close.setAttribute("class","close-button")
-    close.addEventListener("click", function(){profileDetails.style.display="none"})
+    close.addEventListener("click", function(){
+        profileDetails.style.display="none"
+    })
     profileDetails.append(close)
 
    //add to container 
@@ -163,40 +158,5 @@ function renderProfiles(){
         dogBasket.append(profile)
     }
   }
-// const recentPosts = document.getElementById("posts")
-// function renderPosts(){
-//     for (let i = 0; i < posts.length; i++) {
-//         const postCard = document.createElement("div")
-//         const postImg = document.createElement("img")
-//         const username = document.createElement("p")
-//         const postDate = document.createElement("p")
-//         const likesBtn = document.createElement("button")
-//         const likes = document.createElement('p')
-//         postCard.setAttribute("class","post-style")
-//         postImg.setAttribute("class","post-card-img")
-//         username.style.display="block"
-//         likesBtn.style.float ="left"
-//         likes.style.float="left"
-//         likesBtn.style.fontFamily='Material Icons'
-//         likesBtn.style.padding="10px 10px"
-//         postDate.style.float="right"
-
-//         postImg.src = posts[i].image
-//         username.textContent = posts[i].username
-//         postDate.textContent = posts[i].postDate
-//         likesBtn.innerHTML = `<span class="material-icons-outlined">
-//         pets</span>`
-//         likes.textContent = `${posts[i].likes} likes`
-
-
-//         postCard.append(postImg)
-//         postCard.append(username)
-//         postCard.append(postDate)
-//         postCard.append(likesBtn)
-//         postCard.append(likes)
-//         recentPosts.append(postCard)
-//     }
-// }
 
 renderProfiles()
-// renderPosts()
