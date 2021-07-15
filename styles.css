@@ -17,6 +17,8 @@ html, body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background:var(--blueberry);  
     color: var(--blueberry);
     font-weight: 400;     
@@ -39,7 +41,15 @@ h1 > span {
     margin-bottom: 50px;
 }
 
-
+.placeholder{
+    margin: 0 auto;
+    width: 75%;
+    padding: 20px 45px;
+    border: 4px dashed var(--tangerine);
+    color:var(--tangerine);
+    text-align: center;
+    font-size: 3em;
+}
 .subtitle {
     margin-top: 0;
     font-size: 16px;

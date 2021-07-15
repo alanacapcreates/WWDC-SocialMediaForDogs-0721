@@ -124,6 +124,7 @@ function handleclick(event){
     close.setAttribute("class","close-button")
     close.addEventListener("click", function(){
         profileDetails.style.display="none"
+        dogProfile.innerHTML = `<div class = "placeholder">🐾 CLICK ON A USER PROFILE TO SEE MORE 🐾</div>`
     })
     profileDetails.append(close)
 
