@@ -51,19 +51,19 @@ img{
 
 .card-style{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     flex-direction: column;
     background: white;
     color: black;
-    border-radius: 10px;
+    border-radius: 65px 0px 65px 0px;
     box-shadow: 2px 2px 5px #bababa;
     width: 350px;
     margin: 15px;
-    padding: 1em;
+    padding: 2em;
 }
 .btn-more{
     align-self: center;
-    padding: 0.5em 0.3em;
+    padding: 10px 20px;
     width: 75%;
     border: 2px solid black;
     color: black;
@@ -102,9 +102,12 @@ img{
     padding: 45px;
     margin:0 auto;
     background:white;
+    border-radius: 65px 0px 65px 0px;
     box-shadow: 2px 2px 5px #bababa;
     font-size: 24px;
+    text-align: center;
     color: black;
+    
 }
 .profile-modal h2{
     color:#fb0081;
@@ -129,6 +132,29 @@ img{
     color: white;
 }
 .toy{
-    text-decoration: 1px underline wavy #fb0081;
+    text-decoration: underline wavy #fb0081;
    font-weight: bold;
+}
+.profile-img{
+    height: 200px;    
+    object-fit: contain;
+}
+.profile-img:focus,
+.profile-img:hover{
+    z-index: 10;
+    transform: scale(4);
+    transition: ease-in-out 0.5s;
+}
+.picContainer{
+    display: flex;
+    flex-direction: row;
+}
+.picContainer div{
+    margin: 0 auto;
+    width: 250px ;
+}
+.picContainer p{
+    font-style: italic;
+    color: grey;
+    font-size: 16px;
 }
