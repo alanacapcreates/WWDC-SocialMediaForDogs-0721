@@ -45,7 +45,8 @@ h1 > span {
     margin: 0 auto;
     width: 75%;
     padding: 20px 45px;
-    border: 4px dashed var(--tangerine);
+    border: 6px dashed var(--tangerine);
+    background-color: ghostwhite;
     color:var(--tangerine);
     text-align: center;
     font-size: 3em;
