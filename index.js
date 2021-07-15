@@ -146,7 +146,7 @@ function renderProfiles(){
 
         profileImg.src = dogs[i].thumbnail
         profileName.textContent = dogs[i].name
-        profileAge.textContent = dogs[i].age
+        // profileAge.textContent = dogs[i].age
         moreInfo.textContent = "See More"
 
         moreInfo.addEventListener("click",handleclick)
